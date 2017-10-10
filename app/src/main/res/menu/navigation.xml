@@ -8,10 +8,10 @@
         android:title="@string/nav_home"/>
 
     <item
-        android:id="@+id/navigation_attention"
-        android:icon="@drawable/ic_attention"
+        android:id="@+id/navigation_subscription"
+        android:icon="@drawable/ic_subscription"
         android:orderInCategory="1"
-        android:title="@string/nav_attention"/>
+        android:title="@string/nav_subscription"/>
 
     <item
         android:id="@+id/navigation_found"

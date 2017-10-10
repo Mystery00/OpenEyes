@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity()
 		viewPager.adapter = viewPagerAdapter
 
 		navigation.setOnNavigationItemSelectedListener { item ->
-			Logs.i(TAG, "onCreate: "+item.order)
 			viewPager.currentItem = item.order
 			true
 		}
