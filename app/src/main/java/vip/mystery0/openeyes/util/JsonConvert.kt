@@ -1,13 +1,11 @@
 package vip.mystery0.openeyes.util
 
 import com.google.gson.GsonBuilder
-import com.google.gson.stream.JsonReader
+import com.google.gson.reflect.TypeToken
 import vip.mystery0.openeyes.classes.home.Home
 import vip.mystery0.openeyes.classes.home.ItemModel
-import vip.mystery0.openeyes.classes.home.item.TextHeader
-import vip.mystery0.openeyes.classes.home.item.Video
-import vip.mystery0.openeyes.classes.home.item.VideoCollectionOfFollow
-import vip.mystery0.openeyes.classes.home.item.VideoCollectionWithCover
+import vip.mystery0.openeyes.classes.home.item.*
+import java.io.Reader
 
 /**
  * Created by myste.
@@ -26,15 +24,18 @@ class JsonConvert private constructor()
 		}
 	}
 
-	fun convertHome(jsonReader: JsonReader): Home
+	fun convertHome(jsonReader: Reader): Home
 	{
+		val requestListTypeToken = object : TypeToken<Home>()
+		{}
 		val typeFactory = RuntimeTypeAdapterFactory
-				.of(ItemModel::class.java)
-				.registerSubtype(Video::class.java)
-				.registerSubtype(TextHeader::class.java)
-				.registerSubtype(VideoCollectionOfFollow::class.java)
-				.registerSubtype(VideoCollectionWithCover::class.java)
+				.of(ItemModel::class.java, "type")
+				.registerSubtype(Video::class.java, "video")
+				.registerSubtype(TextHeader::class.java, "textHeader")
+				.registerSubtype(TextFooter::class.java, "textFooter")
+				.registerSubtype(VideoCollectionOfFollow::class.java, "videoCollectionOfFollow")
+				.registerSubtype(VideoCollectionWithCover::class.java, "videoCollectionWithCover")
 		val gson = GsonBuilder().registerTypeAdapterFactory(typeFactory).create()
-		return gson.fromJson(jsonReader, Home::class.java)
+		return gson.fromJson(jsonReader, requestListTypeToken.type)
 	}
 }

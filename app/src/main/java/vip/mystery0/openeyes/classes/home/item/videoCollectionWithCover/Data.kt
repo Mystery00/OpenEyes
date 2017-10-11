@@ -1,6 +1,7 @@
-package vip.mystery0.openeyes.classes.home.videoCollectionWithCover
+package vip.mystery0.openeyes.classes.home.item.videoCollectionWithCover
 
-import vip.mystery0.openeyes.classes.home.videoCollectionOfFollow.data.Item
+import vip.mystery0.openeyes.classes.home.item.videoCollectionOfFollow.data.Item
+import vip.mystery0.openeyes.classes.home.item.videoCollectionWithCover.Header
 
 /**
  * Created by myste.

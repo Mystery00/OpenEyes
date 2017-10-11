@@ -1,7 +1,7 @@
-package vip.mystery0.openeyes.classes.home.data.item.data
+package vip.mystery0.openeyes.classes.home.item.video.data
 
-import vip.mystery0.openeyes.classes.home.data.item.data.author.follow.Followed
-import vip.mystery0.openeyes.classes.home.data.item.data.author.shield.Shield
+import vip.mystery0.openeyes.classes.home.item.video.data.author.follow.Followed
+import vip.mystery0.openeyes.classes.home.item.video.data.author.shield.Shield
 
 /**
  * Created by myste.

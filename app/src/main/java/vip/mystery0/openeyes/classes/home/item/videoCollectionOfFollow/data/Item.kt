@@ -1,13 +1,13 @@
-package vip.mystery0.openeyes.classes.home.videoCollectionOfFollow.data
+package vip.mystery0.openeyes.classes.home.item.videoCollectionOfFollow.data
 
-import vip.mystery0.openeyes.classes.home.videoCollectionOfFollow.data.item.Data
+import vip.mystery0.openeyes.classes.home.item.video.Data
 
 /**
  * Created by myste.
  */
 class Item
 {
-	lateinit var title:String
+	lateinit var type:String
 	lateinit var data: Data
 	lateinit var tag:String
 }

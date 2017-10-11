@@ -1,4 +1,4 @@
-package vip.mystery0.openeyes.classes.home.videoCollectionWithCover
+package vip.mystery0.openeyes.classes.home.item.videoCollectionWithCover
 
 /**
  * Created by myste.
@@ -9,7 +9,7 @@ class Header
 	lateinit var title: String
 	lateinit var font: String
 	lateinit var cover: String
-	lateinit var label: String
+//	lateinit var label: String
 	lateinit var actionUrl: String
 	//labelList
 }

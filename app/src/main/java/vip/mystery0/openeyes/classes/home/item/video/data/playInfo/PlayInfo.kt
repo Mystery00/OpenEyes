@@ -1,6 +1,6 @@
-package vip.mystery0.openeyes.classes.home.data.item.data.playInfo
+package vip.mystery0.openeyes.classes.home.item.video.data.playInfo
 
-import vip.mystery0.openeyes.classes.home.data.item.data.playInfo.urlList.UrlList
+import vip.mystery0.openeyes.classes.home.item.video.data.playInfo.urlList.UrlList
 
 /**
  * Created by myste.

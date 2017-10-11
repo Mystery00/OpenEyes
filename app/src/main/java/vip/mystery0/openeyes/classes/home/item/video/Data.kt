@@ -1,10 +1,7 @@
-package vip.mystery0.openeyes.classes.home.videoCollectionOfFollow.data.item
+package vip.mystery0.openeyes.classes.home.item.video
 
-import vip.mystery0.openeyes.classes.home.data.item.data.Author
-import vip.mystery0.openeyes.classes.home.data.item.data.Consumption
-import vip.mystery0.openeyes.classes.home.data.item.data.Cover
-import vip.mystery0.openeyes.classes.home.data.item.data.WebUrl
-import vip.mystery0.openeyes.classes.home.data.item.data.playInfo.PlayInfo
+import vip.mystery0.openeyes.classes.home.item.video.data.*
+import vip.mystery0.openeyes.classes.home.item.video.data.playInfo.PlayInfo
 
 /**
  * Created by myste.
@@ -16,6 +13,7 @@ class Data
 	lateinit var title: String
 	lateinit var slogan: String
 	lateinit var description: String
+	lateinit var provider:Provider
 	lateinit var category: String
 	lateinit var author: Author
 	lateinit var cover: Cover

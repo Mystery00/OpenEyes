@@ -1,4 +1,4 @@
-package vip.mystery0.openeyes.classes.home.data.item.data
+package vip.mystery0.openeyes.classes.home.item.video.data
 
 /**
  * Created by myste.

@@ -1,4 +1,4 @@
-package vip.mystery0.openeyes.classes.home.item.textHeader
+package vip.mystery0.openeyes.classes.home.item.textFooter
 
 /**
  * Created by myste.
