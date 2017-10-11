@@ -36,7 +36,7 @@ class HomeFragmentAdapter(private val context: Context,
 		{
 			holder.textViewTitle.text = item.data.title
 			holder.textViewSubTitle.text = item.data.category
-			Glide.with(context).load(item.data.cover.homepage)
+			Glide.with(context).load(item.data.cover.homepage).into(holder.imageViewArt)
 		}
 	}
 

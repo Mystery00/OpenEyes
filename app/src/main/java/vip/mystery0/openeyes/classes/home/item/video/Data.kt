@@ -39,7 +39,7 @@ class Data
 	lateinit var webAdTrack: String
 	var date = 0L
 	lateinit var promotion: String
-	lateinit var label: String
+//	lateinit var label: String
 	//labelList
 	lateinit var descriptionEditor: String
 	var collected = false
