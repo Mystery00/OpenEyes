@@ -24,28 +24,6 @@ class MainActivity : AppCompatActivity()
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 
-		HTTPok().setURL("http://baobab.kaiyanapp.com/api/v4/tabs/selected")
-				.setRequestMethod(HTTPok.GET)
-				.setListener(object : HTTPokResponseListener
-				{
-					override fun onError(message: String?)
-					{
-						Logs.e(TAG, "onError: " + message)
-					}
-
-					override fun onResponse(response: HTTPokResponse)
-					{
-						val jsonConvert = JsonConvert.getInstance()
-						val file = File(cacheDir, "test")
-						response.getFile(file)
-						val fileReader = FileReader(file)
-						val home = jsonConvert.convertHome(fileReader)
-						Logs.i(TAG, "onResponse: ")
-					}
-				})
-				.open()
-
-
 		val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
 		viewPagerAdapter.addFragment(HomeFragment())
 		viewPagerAdapter.addFragment(HomeFragment())
