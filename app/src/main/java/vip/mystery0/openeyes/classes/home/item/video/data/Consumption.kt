@@ -1,9 +1,11 @@
 package vip.mystery0.openeyes.classes.home.item.video.data
 
+import java.io.Serializable
+
 /**
  * Created by myste.
  */
-class Consumption
+class Consumption: Serializable
 {
 	var collectionCount=0
 	var shareCount=0

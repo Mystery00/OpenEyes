@@ -1,9 +1,11 @@
 package vip.mystery0.openeyes.classes.home
 
+import java.io.Serializable
+
 /**
  * Created by myste.
  */
-class Home
+class Home:Serializable
 {
 	lateinit var itemList: Array<ItemModel>
 	var count = 0

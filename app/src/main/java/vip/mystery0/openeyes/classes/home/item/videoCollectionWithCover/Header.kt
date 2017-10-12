@@ -1,9 +1,11 @@
 package vip.mystery0.openeyes.classes.home.item.videoCollectionWithCover
 
+import java.io.Serializable
+
 /**
  * Created by myste.
  */
-class Header
+class Header: Serializable
 {
 	var id = 0L
 	lateinit var title: String

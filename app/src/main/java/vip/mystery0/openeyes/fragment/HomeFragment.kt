@@ -33,6 +33,7 @@ class HomeFragment : Fragment()
 		val homeFragmentHandler = HomeFragmentHandler()
 		homeFragmentHandler.context = activity
 		homeFragmentHandler.recyclerView = recyclerView
+		homeFragmentHandler.fragmentManger = fragmentManager
 
 		HTTPok().setURL("http://baobab.kaiyanapp.com/api/v4/tabs/selected")
 				.setRequestMethod(HTTPok.GET)

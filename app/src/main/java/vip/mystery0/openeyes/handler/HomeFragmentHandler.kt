@@ -1,5 +1,6 @@
 package vip.mystery0.openeyes.handler
 
+import android.support.v4.app.FragmentManager
 import android.content.Context
 import android.os.Handler
 import android.os.Message
@@ -16,12 +17,13 @@ class HomeFragmentHandler : Handler()
 	lateinit var context: Context
 	lateinit var recyclerView: RecyclerView
 	lateinit var home: Home
+	lateinit var fragmentManger: FragmentManager
 	lateinit var homeFragmentAdapter: HomeFragmentAdapter
 
 	override fun handleMessage(msg: Message?)
 	{
 		recyclerView.layoutManager = LinearLayoutManager(context)
-		homeFragmentAdapter = HomeFragmentAdapter(context, home)
+		homeFragmentAdapter = HomeFragmentAdapter(context, home, fragmentManger)
 		recyclerView.adapter = homeFragmentAdapter
 	}
 }

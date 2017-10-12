@@ -2,11 +2,12 @@ package vip.mystery0.openeyes.classes.home.item.video
 
 import vip.mystery0.openeyes.classes.home.item.video.data.*
 import vip.mystery0.openeyes.classes.home.item.video.data.playInfo.PlayInfo
+import java.io.Serializable
 
 /**
  * Created by myste.
  */
-class Data
+class Data: Serializable
 {
 	lateinit var dataType: String
 	lateinit var id: String

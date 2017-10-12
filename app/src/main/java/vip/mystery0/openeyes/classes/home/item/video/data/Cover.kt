@@ -1,9 +1,11 @@
 package vip.mystery0.openeyes.classes.home.item.video.data
 
+import java.io.Serializable
+
 /**
  * Created by myste.
  */
-class Cover
+class Cover: Serializable
 {
 	lateinit var feed:String
 	lateinit var detail:String

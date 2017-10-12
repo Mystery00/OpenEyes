@@ -1,9 +1,11 @@
 package vip.mystery0.openeyes.classes.home.item.textFooter
 
+import java.io.Serializable
+
 /**
  * Created by myste.
  */
-class Data
+class Data: Serializable
 {
 	lateinit var dataType: String
 	lateinit var text: String

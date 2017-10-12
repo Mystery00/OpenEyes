@@ -7,13 +7,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import vip.mystery0.openeyes.R
 import vip.mystery0.openeyes.adapter.ViewPagerAdapter
 import vip.mystery0.openeyes.fragment.HomeFragment
-import vip.mystery0.openeyes.util.JsonConvert
-import vip.mystery0.tools.HTTPok.HTTPok
-import vip.mystery0.tools.HTTPok.HTTPokResponse
-import vip.mystery0.tools.HTTPok.HTTPokResponseListener
-import vip.mystery0.tools.Logs.Logs
-import java.io.File
-import java.io.FileReader
 
 class MainActivity : AppCompatActivity()
 {

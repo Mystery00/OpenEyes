@@ -15,11 +15,14 @@ class HeaderPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapte
 	private val fragmentList = ArrayList<HeaderPagerFragment>()
 	private val dataList = ArrayList<Item>()
 
+	fun addFragment(fragment: HeaderPagerFragment)
+	{
+		fragmentList.add(fragment)
+	}
+
 	override fun getItem(position: Int): Fragment
 	{
-		val fragment = fragmentList[position]
-
-		return fragment
+		return fragmentList[position]
 	}
 
 	override fun getCount(): Int
