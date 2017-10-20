@@ -1,6 +1,5 @@
 package vip.mystery0.openeyes.adapter
 
-import android.support.v4.app.FragmentManager
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,16 +8,16 @@ import com.bumptech.glide.Glide
 import vip.mystery0.openeyes.R
 import vip.mystery0.openeyes.classes.home.Home
 import vip.mystery0.openeyes.classes.home.item.Video
-import vip.mystery0.openeyes.classes.home.item.VideoCollectionWithCover
 import vip.mystery0.openeyes.viewHolder.HeaderPagerViewHolder
 import vip.mystery0.openeyes.viewHolder.HomeFragmentViewHolder
+import vip.mystery0.tools.headerPage.Header
 
 /**
  * Created by myste.
  */
 class HomeFragmentAdapter(private val context: Context,
 						  private val home: Home,
-						  private val fragmentManager: FragmentManager) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
+						  private val list: ArrayList<Header>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
 	override fun getItemCount(): Int
 	{
@@ -50,7 +49,7 @@ class HomeFragmentAdapter(private val context: Context,
 			}
 			is HeaderPagerViewHolder ->
 			{
-				holder.headerPager.setData(home.itemList[home.itemList.indexOfFirst { it is VideoCollectionWithCover }] as VideoCollectionWithCover, fragmentManager)
+				holder.headerPager.setData(list)
 			}
 		}
 	}

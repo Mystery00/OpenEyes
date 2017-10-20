@@ -10,7 +10,6 @@ import vip.mystery0.openeyes.fragment.HomeFragment
 
 class MainActivity : AppCompatActivity()
 {
-	private val TAG = "MainActivity"
 
 	override fun onCreate(savedInstanceState: Bundle?)
 	{

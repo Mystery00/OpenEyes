@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vip.mystery0.openeyes.customView.HeaderPager
+<vip.mystery0.tools.headerPage.HeaderPage
     android:id="@+id/headerPager"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-</vip.mystery0.openeyes.customView.HeaderPager>
+    android:layout_height="wrap_content"/>

@@ -7,23 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import vip.mystery0.openeyes.R
+import vip.mystery0.openeyes.classes.home.item.Video
 import vip.mystery0.openeyes.handler.HomeFragmentHandler
 import vip.mystery0.openeyes.util.JsonConvert
-import vip.mystery0.tools.HTTPok.HTTPok
-import vip.mystery0.tools.HTTPok.HTTPokResponse
-import vip.mystery0.tools.HTTPok.HTTPokResponseListener
-import vip.mystery0.tools.Logs.Logs
+import vip.mystery0.tools.hTTPok.HTTPok
+import vip.mystery0.tools.hTTPok.HTTPokResponse
+import vip.mystery0.tools.hTTPok.HTTPokResponseListener
+import vip.mystery0.tools.headerPage.Header
+import vip.mystery0.tools.logs.Logs
 import java.io.File
 import java.io.FileReader
 
 class HomeFragment : Fragment()
 {
 	private val TAG = "HomeFragment"
-
-	override fun onCreate(savedInstanceState: Bundle?)
-	{
-		super.onCreate(savedInstanceState)
-	}
 
 	override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
 							  savedInstanceState: Bundle?): View?
@@ -50,7 +47,14 @@ class HomeFragment : Fragment()
 						val file = File(activity.cacheDir, "test")
 						response.getFile(file)
 						val fileReader = FileReader(file)
-						homeFragmentHandler.home = jsonConvert.convertHome(fileReader)
+						val home = jsonConvert.convertHome(fileReader)
+						homeFragmentHandler.home = home
+						val list = ArrayList<Header>()
+						(0 until 5)
+								.map { home.itemList[it] }
+								.filterIsInstance<Video>()
+								.mapTo(list) { Header(it.data.cover.homepage, it.data.title, it.data.slogan) }
+						homeFragmentHandler.list = list
 						homeFragmentHandler.sendEmptyMessage(0)
 					}
 				})
