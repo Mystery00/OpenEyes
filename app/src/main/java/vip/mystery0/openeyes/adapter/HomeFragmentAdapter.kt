@@ -11,6 +11,9 @@ import vip.mystery0.openeyes.classes.home.item.Video
 import vip.mystery0.openeyes.viewHolder.HeaderPagerViewHolder
 import vip.mystery0.openeyes.viewHolder.HomeFragmentViewHolder
 import vip.mystery0.tools.headerPage.Header
+import vip.mystery0.tools.headerPage.OnRefreshListener
+import vip.mystery0.tools.headerPage.SearchButtonOnClickListener
+import vip.mystery0.tools.logs.Logs
 
 /**
  * Created by myste.
@@ -19,8 +22,11 @@ class HomeFragmentAdapter(private val context: Context,
 						  private val home: Home,
 						  private val list: ArrayList<Header>) : RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
+	private val TAG = "HomeFragmentAdapter"
+
 	override fun getItemCount(): Int
 	{
+//		return 1
 		return home.count
 	}
 
@@ -50,6 +56,20 @@ class HomeFragmentAdapter(private val context: Context,
 			is HeaderPagerViewHolder ->
 			{
 				holder.headerPager.setData(list)
+				holder.headerPager.onRefreshListener = object : OnRefreshListener
+				{
+					override fun onRefresh()
+					{
+						Logs.i(TAG, "onRefresh: ")
+					}
+				}
+				holder.headerPager.searchButtonOnClickListener = object : SearchButtonOnClickListener
+				{
+					override fun onClick()
+					{
+						Logs.i(TAG, "onClick: ")
+					}
+				}
 			}
 		}
 	}
